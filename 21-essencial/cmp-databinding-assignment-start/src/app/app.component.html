@@ -1,0 +1,11 @@
+<app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+
+<!-- Contenedor para números impares -->
+<ng-container *ngFor="let num of numbers">
+  <app-odd *ngIf="num % 2 !== 0" [number]="num"></app-odd>
+</ng-container>
+
+<!-- Contenedor para números pares -->
+<ng-container *ngFor="let num of numbers">
+  <app-even *ngIf="num % 2 === 0" [number]="num"></app-even>
+</ng-container>
